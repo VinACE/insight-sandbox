@@ -14,16 +14,18 @@ sudo mv /usr/local/spark-1.4.1-bin-hadoop2.4 /usr/local/spark
 echo "export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:$SPARK_HOME/bin" >> ~/.profile
 . ~/.profile
+source ~/.profile
 
 # this is for my set up
 echo "export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:$SPARK_HOME/bin" >> ~/.zshrc
 . ~/.zshrc
+source ~/.profile
 
 # Set the Java path for spark-env
 scp $SPARK_HOME/conf/spark-env.sh.template $SPARK_HOME/conf/spark-env.sh
 
-echo "export JAVA_HOME=/usr
-export SPARK_PUBLIC_DNS="<public-dns>"
-export SPARK_WORKER_CORES=$(echo $(nproc)*3 | bc)" >> $SPARK_HOME/conf/spark-env.sh
+# echo "export JAVA_HOME=/usr
+# export SPARK_PUBLIC_DNS=""
+# export SPARK_WORKER_CORES=$(echo $(nproc)*3 | bc)" >> $SPARK_HOME/conf/spark-env.sh
 
