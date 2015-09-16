@@ -30,19 +30,14 @@ hdfs -version
 : '
 sudo vim $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 Find the line with export JAVA_HOME=${JAVA_HOME} and replace the ${JAVA_HOME} with /usr
-
-export JAVA_HOME=/usr
 '
+sed -i 's@${JAVA_HOME}@/usr@g' $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 
 # core-site
-: '
-edit $HADOOP_HOME/etc/hadoop/core-site.xml
-all point to namenode
-<property>
-   <name>fs.defaultFS</name>
-   <value>hdfs://masternode_public_dns:9000</value>
-</property>
-'
+MASTER_NAME='x' 
+# configure core-site.xml
+sed -i '20i <property>\n  <name>fs.defaultFS</name>\n  <value>hdfs://'"$MASTER_NAME"':9000</value>\n</property>' $HADOOP_HOME/etc/hadoop/core-site.xml
+
 
 : '
 <property>
