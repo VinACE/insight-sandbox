@@ -12,7 +12,7 @@ sudo mv /usr/local/hadoop-* /usr/local/hadoop
 
 # set up paths
 
-echo"export JAVA_HOME=/usr
+echo "export JAVA_HOME=/usr
 export PATH=$PATH:$JAVA_HOME/bin
 
 export HADOOP_HOME=/usr/local/hadoop
@@ -20,6 +20,16 @@ export PATH=$PATH:$HADOOP_HOME/bin" >> ~/.profile
 
 # refresh
 . ~/.profile
+
+echo "export JAVA_HOME=/usr
+export PATH=$PATH:$JAVA_HOME/bin
+
+export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin" >> ~/.zshrc
+
+# refresh
+. ~/.zshrc
+source ~/.zshrc
 
 # double check versions installed
 hdfs -version
