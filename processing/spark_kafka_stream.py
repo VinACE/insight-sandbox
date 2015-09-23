@@ -1,3 +1,10 @@
+"""
+This example uses the spark-streaming-kafka jar file, which you can download from the official link. See the docs for the link: https://spark.apache.org/docs/latest/streaming-kafka-integration.html#spark-streaming-kafka-integration-guide
+
+Run the script with this command:
+pyspark --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.0 example.py
+"""
+
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
