@@ -24,7 +24,7 @@ class Producer(object):
                                           price_field,
                                           volume_field)
             print message_info
-            self.producer.send_messages('price_data_part4', source_symbol, message_info)
+            self.producer.send_messages('price_data', source_symbol, message_info)
             msg_cnt += 1
 
 if __name__ == "__main__":
