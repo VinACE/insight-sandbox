@@ -3,6 +3,10 @@ This example uses the spark-streaming-kafka jar file, which you can download fro
 
 Run the script with this command:
 pyspark --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.0 example.py
+
+OR 
+
+spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.0 processing/spark_test.py
 """
 
 from pyspark import SparkContext
