@@ -12,7 +12,7 @@ Other scripts available include semi-automated installations for [hadoop](https:
 The remaining directories correspond to pipeline sections.
 
 * [Ingestion](ngestion)
-* [Stream Processing]((processing)
+* [Stream Processing](processing)
 
 Other handy reference material
 
