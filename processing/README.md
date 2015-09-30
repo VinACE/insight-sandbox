@@ -14,6 +14,7 @@ This folder contains scripts showing examples for working with stream processing
 
 * [PySpark](http://spark.apache.org/docs/0.9.1/python-programming-guide.html)
 * [Common Spark Troubleshooting](http://www.datastax.com/dev/blog/common-spark-troubleshooting)
+* [PySpark Cassandra](https://github.com/TargetHolding/pyspark-cassandra)
 
 ## How to use
 
@@ -34,7 +35,9 @@ To run this on your master node, type:
 
 See spark_kafka_example.py for an example of usage with a Kafka producer. Once this spark stream is open, you can send data to your pipeline with your producer. You should be able to see the output of the spark stream.
 
+To save data into Cassandra, run the spark-submit commands with the TargetHolding/pyspark-cassandra:0.1.5 and conf settings. See example below:
 
+`spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.0,TargetHolding/pyspark-cassandra:0.1.5 --conf spark.cassandra.connection.host=127.0.0.1 example.py my-topic`
 
 
 ---
