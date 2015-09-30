@@ -12,8 +12,8 @@ This folder contains scripts showing examples for working with stream processing
 
 **Spark Streaming**
 
-[PySpark](http://spark.apache.org/docs/0.9.1/python-programming-guide.html)
-[Common Spark Troubleshooting](http://www.datastax.com/dev/blog/common-spark-troubleshooting)
+* [PySpark](http://spark.apache.org/docs/0.9.1/python-programming-guide.html)
+* [Common Spark Troubleshooting](http://www.datastax.com/dev/blog/common-spark-troubleshooting)
 
 ## How to use
 
