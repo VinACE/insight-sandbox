@@ -12,7 +12,8 @@ This folder contains scripts showing examples for working with stream processing
 
 **Spark Streaming**
 
-[PySpark]()
+[PySpark](http://spark.apache.org/docs/0.9.1/python-programming-guide.html)
+[Common Spark Troubleshooting](http://www.datastax.com/dev/blog/common-spark-troubleshooting)
 
 ## How to use
 
@@ -26,7 +27,8 @@ After installing pyleus and following instructions for installing, on your maste
 
 **Spark Streaming**
 
-On your master node, type:
+The module you'll need is from KafkaUtils, called CreateStream.
+To run this on your master node, type:
 
 `spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.0 processing/spark_test.py`
 
